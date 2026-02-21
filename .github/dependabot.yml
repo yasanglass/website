@@ -12,3 +12,15 @@ updates:
     open-pull-requests-limit: 3
     assignees:
       - "yasanglass"
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "16:30"
+      timezone: "Europe/Prague"
+    labels:
+      - 'gradle'
+      - 'dependencies'
+    open-pull-requests-limit: 3
+    assignees:
+      - "yasanglass"
