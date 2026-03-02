@@ -12,8 +12,8 @@ kotlin {
 
     sourceSets {
         jsMain.dependencies {
-            implementation(compose.html.core)
-            implementation(compose.runtime)
+            implementation(libs.jetbrains.compose.html.core)
+            implementation(libs.jetbrains.compose.runtime)
         }
     }
 }
