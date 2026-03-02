@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -16,7 +16,47 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  update-yarn-lock:
+    name: Update Kotlin JS yarn.lock
+    runs-on: ubuntu-latest
+    outputs:
+      updated: ${{ steps.check.outputs.updated }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup JDK
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v5
+
+      - name: Update Kotlin JS yarn.lock
+        run: ./gradlew kotlinUpgradeYarnLock
+
+      - name: Check for changes
+        id: check
+        run: |
+          if git diff --quiet kotlin-js-store/yarn.lock; then
+            echo "updated=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "updated=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push updated yarn.lock
+        if: steps.check.outputs.updated == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add kotlin-js-store/yarn.lock
+          git commit -m "Update kotlin-js-store/yarn.lock"
+          git push
+
   deploy:
+    needs: update-yarn-lock
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -24,21 +64,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+
       - name: Setup JDK
         uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: 17
+
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v5
+
       - name: Build
         run: ./gradlew jsBrowserDistribution
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: 'build/dist/js/productionExecutable'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
