@@ -61,7 +61,6 @@ private data class LinkItem(
 )
 
 private val links = listOf(
-    LinkItem("Website", "https://yasan.glass"),
     LinkItem("Email", "mailto:yasanglass@gmail.com"),
     LinkItem("Discord Server", "https://discord.gg/8BQrfyA"),
     LinkItem("Telegram Channel", "https://t.me/YASANupdates"),
