@@ -61,12 +61,14 @@ private data class LinkItem(
 )
 
 private val links = listOf(
-    LinkItem("GitHub", "https://github.com/yasanglass"),
+    LinkItem("Website", "https://yasan.glass"),
+    LinkItem("Email", "mailto:yasanglass@gmail.com"),
+    LinkItem("Discord Server", "https://discord.gg/8BQrfyA"),
+    LinkItem("Telegram Channel", "https://t.me/YASANupdates"),
     LinkItem("Play Store", "https://play.google.com/store/apps/dev?id=5035207490031558874"),
-    LinkItem("Discord", "https://discord.gg/8BQrfyA"),
-    LinkItem("Telegram", "https://t.me/YASANupdates"),
-    LinkItem("Gumroad", "https://yasanglass.gumroad.com"),
+    LinkItem("GitHub", "https://github.com/yasanglass"),
     LinkItem("Mastodon", "https://mastodon.social/@yasanglass", rel = "me"),
     LinkItem("Bluesky", "https://bsky.app/profile/yasan.glass"),
-    LinkItem("Email", "mailto:yasanglass@gmail.com"),
+    LinkItem("Gumroad", "https://yasanglass.gumroad.com"),
+    LinkItem("Crowdin", "https://crowdin.com/profile/yasanglass"),
 )

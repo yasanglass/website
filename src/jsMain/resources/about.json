@@ -4,40 +4,44 @@
     "biography": "Developer & Designer",
     "links": [
       {
-        "name": "Bluesky",
-        "url": "https://bsky.app/profile/yasan.glass"
-      },
-      {
-        "name": "Discord",
-        "url": "https://discord.gg/8BQrfyA"
+        "name": "Website",
+        "url": "https://yasan.glass"
       },
       {
         "name": "Email",
         "url": "mailto:yasanglass@gmail.com"
       },
       {
-        "name": "GitHub",
-        "url": "https://github.com/yasanglass"
+        "name": "Discord Server",
+        "url": "https://discord.gg/8BQrfyA"
       },
       {
-        "name": "Gumroad",
-        "url": "https://yasanglass.gumroad.com"
-      },
-      {
-        "name": "Mastodon",
-        "url": "https://mastodon.social/@yasanglass"
+        "name": "Telegram Channel",
+        "url": "https://t.me/YASANupdates"
       },
       {
         "name": "Play Store",
         "url": "https://play.google.com/store/apps/dev?id=5035207490031558874"
       },
       {
-        "name": "Telegram",
-        "url": "https://t.me/YASANupdates"
+        "name": "GitHub",
+        "url": "https://github.com/yasanglass"
       },
       {
-        "name": "Website",
-        "url": "https://yasan.glass"
+        "name": "Mastodon",
+        "url": "https://mastodon.social/@yasanglass"
+      },
+      {
+        "name": "Bluesky",
+        "url": "https://bsky.app/profile/yasan.glass"
+      },
+      {
+        "name": "Gumroad",
+        "url": "https://yasanglass.gumroad.com"
+      },
+      {
+        "name": "Crowdin",
+        "url": "https://crowdin.com/profile/yasanglass"
       }
     ]
   }
