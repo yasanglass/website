@@ -56,7 +56,9 @@ object AppStyleSheet : StyleSheet() {
     }
 
     val linkStyle by style {
-        display(DisplayStyle.Block)
+        display(DisplayStyle.Flex)
+        property("align-items", "center")
+        property("justify-content", "space-between")
         property("background-color", "var(--layer-fg)")
         property("color", "var(--text)")
         property("text-align", "start")
@@ -73,5 +75,17 @@ object AppStyleSheet : StyleSheet() {
             property("color", "var(--text)")
             property("background-color", "var(--layer-bg)")
         }
+    }
+
+    val linkIcon by style {
+        width(24.px)
+        property("height", "24px")
+        property("margin-left", "12px")
+        property("flex-shrink", "0")
+        property("background-color", "var(--text)")
+        property("-webkit-mask-size", "contain")
+        property("mask-size", "contain")
+        property("-webkit-mask-repeat", "no-repeat")
+        property("mask-repeat", "no-repeat")
     }
 }

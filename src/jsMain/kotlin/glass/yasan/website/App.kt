@@ -12,6 +12,7 @@ import org.jetbrains.compose.web.dom.Main
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Picture
 import org.jetbrains.compose.web.dom.Source
+import org.jetbrains.compose.web.dom.Span
 import org.jetbrains.compose.web.dom.Text
 import org.jetbrains.compose.web.dom.Ul
 
@@ -45,7 +46,14 @@ fun App() {
                                 classes(AppStyleSheet.linkStyle)
                             },
                         ) {
-                            Text(item.name)
+                            Span { Text(item.name) }
+                            Div(attrs = {
+                                classes(AppStyleSheet.linkIcon)
+                                style {
+                                    property("-webkit-mask-image", "url('${item.icon}')")
+                                    property("mask-image", "url('${item.icon}')")
+                                }
+                            })
                         }
                     }
                 }
@@ -57,17 +65,18 @@ fun App() {
 private data class LinkItem(
     val name: String,
     val url: String,
+    val icon: String,
     val rel: String? = null,
 )
 
 private val links = listOf(
-    LinkItem("Email", "mailto:yasanglass@gmail.com"),
-    LinkItem("Discord Server", "https://discord.gg/8BQrfyA"),
-    LinkItem("Telegram Channel", "https://t.me/YASANupdates"),
-    LinkItem("Play Store", "https://play.google.com/store/apps/dev?id=5035207490031558874"),
-    LinkItem("GitHub", "https://github.com/yasanglass"),
-    LinkItem("Mastodon", "https://mastodon.social/@yasanglass", rel = "me"),
-    LinkItem("Bluesky", "https://bsky.app/profile/yasan.glass"),
-    LinkItem("Gumroad", "https://yasanglass.gumroad.com"),
-    LinkItem("Crowdin", "https://crowdin.com/profile/yasanglass"),
+    LinkItem("Email", "mailto:yasanglass@gmail.com", "ic_mail.svg"),
+    LinkItem("Discord Server", "https://discord.gg/8BQrfyA", "ic_discord.svg"),
+    LinkItem("Telegram Channel", "https://t.me/YASANupdates", "ic_telegram.svg"),
+    LinkItem("Play Store", "https://play.google.com/store/apps/dev?id=5035207490031558874", "ic_play_store.svg"),
+    LinkItem("GitHub", "https://github.com/yasanglass", "ic_github.svg"),
+    LinkItem("Mastodon", "https://mastodon.social/@yasanglass", "ic_mastodon.svg", rel = "me"),
+    LinkItem("Bluesky", "https://bsky.app/profile/yasan.glass", "ic_bluesky.svg"),
+    LinkItem("Gumroad", "https://yasanglass.gumroad.com", "ic_gumroad.svg"),
+    LinkItem("Crowdin", "https://crowdin.com/profile/yasanglass", "ic_translate.svg"),
 )
