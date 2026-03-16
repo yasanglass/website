@@ -8,7 +8,7 @@ updates:
   rebase-strategy: disabled
   labels:
     - 'dependencies'
-  open-pull-requests-limit: 3
+  open-pull-requests-limit: 5
   assignees:
     - "yasanglass"
   groups:
@@ -30,7 +30,7 @@ updates:
   rebase-strategy: disabled
   labels:
     - 'dependencies'
-  open-pull-requests-limit: 3
+  open-pull-requests-limit: 5
   assignees:
     - "yasanglass"
 
@@ -43,6 +43,6 @@ updates:
   labels:
     - 'github actions'
     - 'dependencies'
-  open-pull-requests-limit: 3
+  open-pull-requests-limit: 5
   assignees:
     - "yasanglass"
