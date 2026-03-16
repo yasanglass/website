@@ -46,7 +46,7 @@ object AppStyleSheet : StyleSheet() {
     }
 
     val logoHeader by style {
-        width(128.px)
+        width(200.px)
     }
 
     val bio by style {
