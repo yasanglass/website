@@ -22,6 +22,18 @@ updates:
       patterns:
         - "glass.yasan.*"
 
+- package-ecosystem: npm
+  directory: "/kotlin-js-store"
+  schedule:
+    interval: monthly
+    timezone: "Europe/Prague"
+  rebase-strategy: disabled
+  labels:
+    - 'dependencies'
+  open-pull-requests-limit: 3
+  assignees:
+    - "yasanglass"
+
 - package-ecosystem: "github-actions"
   directory: "/"
   schedule:
