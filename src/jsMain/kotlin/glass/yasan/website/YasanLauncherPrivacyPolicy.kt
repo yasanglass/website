@@ -95,6 +95,16 @@ fun YasanLauncherPrivacyPolicy() {
                     },
                 ) { Text("RevenueCat") }
             }
+            Li {
+                A(
+                    href = "https://posthog.com/privacy",
+                    attrs = {
+                        target(ATarget.Blank)
+                        attr("rel", "noopener noreferrer")
+                        classes(AppStyleSheet.privacyLink)
+                    },
+                ) { Text("PostHog") }
+            }
         }
         P(attrs = { classes(AppStyleSheet.privacyParagraph) }) {
             Text("The Service Provider may disclose User Provided and Automatically Collected Information:")
