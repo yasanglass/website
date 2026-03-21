@@ -77,6 +77,32 @@ object AppStyleSheet : StyleSheet() {
         }
     }
 
+    val privacyHeading by style {
+        fontSize(1.75.cssRem)
+        property("margin-bottom", "24px")
+    }
+
+    val privacySectionHeading by style {
+        fontSize(1.25.cssRem)
+        property("margin-top", "32px")
+        property("margin-bottom", "12px")
+    }
+
+    val privacyParagraph by style {
+        property("margin-bottom", "16px")
+    }
+
+    val privacyList by style {
+        property("margin-bottom", "16px")
+        property("padding-left", "24px")
+        property("list-style", "disc")
+    }
+
+    val privacyLink by style {
+        property("color", "var(--text)")
+        property("text-decoration", "underline")
+    }
+
     val linkIcon by style {
         width(24.px)
         property("height", "24px")
