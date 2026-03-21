@@ -16,7 +16,7 @@ import org.jetbrains.compose.web.dom.Ul
 fun YasanLauncherPrivacyPolicy() {
     Div(attrs = { classes(AppStyleSheet.container) }) {
         H1(attrs = { classes(AppStyleSheet.privacyHeading) }) {
-            Text("Yasan Launcher - Privacy Policy")
+            Text("Privacy Policy of Yasan Launcher")
         }
 
         P(attrs = { classes(AppStyleSheet.privacyParagraph) }) {
