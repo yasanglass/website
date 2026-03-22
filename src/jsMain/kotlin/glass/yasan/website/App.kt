@@ -77,6 +77,5 @@ private val links = listOf(
     LinkItem("GitHub", "https://github.com/yasanglass", "ic_github.svg"),
     LinkItem("Mastodon", "https://mastodon.social/@yasanglass", "ic_mastodon.svg", rel = "me"),
     LinkItem("Bluesky", "https://bsky.app/profile/yasan.glass", "ic_bluesky.svg"),
-    LinkItem("Gumroad", "https://yasanglass.gumroad.com", "ic_gumroad.svg"),
     LinkItem("Crowdin", "https://crowdin.com/profile/yasanglass", "ic_translate.svg"),
 )
