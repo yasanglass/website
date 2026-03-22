@@ -15,4 +15,4 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "website"
+rootProject.name = "yasanglass-github-io"
