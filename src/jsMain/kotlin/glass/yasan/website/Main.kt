@@ -9,6 +9,10 @@ fun main() {
     renderComposable(rootElementId = "root") {
         Style(AppStyleSheet)
         when (window.location.pathname.trimEnd('/')) {
+            "/yasan-launcher" -> {
+                document.title = "Yasan Launcher"
+                YasanLauncher()
+            }
             "/yasan-launcher/privacy" -> {
                 document.title = "Privacy Policy - Yasan Launcher"
                 YasanLauncherPrivacyPolicy()

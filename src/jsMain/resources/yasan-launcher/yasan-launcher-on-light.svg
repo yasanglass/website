@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 4167 4167" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-4375,0)">
+        <g id="Logo-On-Light" serif:id="Logo On Light" transform="matrix(1,0,0,1,-14062.5,0)">
+            <rect x="18437.5" y="0" width="4166.667" height="4166.667" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="18437.5" y="0" width="4166.667" height="4166.667"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(15.66416,0,0,15.66416,20520.833333,1923.070959)">
+                    <path d="M0,-122.769L-133,0L-133,-122.769L0,-122.769Z" style="fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(14.588712,5.703981,5.703981,-14.588712,21519.749726,885.274082)">
+                    <path d="M9.079,-5.403C39.431,-17.27 69.377,12.675 57.509,43.028C49.991,62.257 28.308,71.75 9.079,64.232L9.078,64.232C-22.617,51.839 -22.616,6.99 9.079,-5.403" style="fill:rgb(255,87,34);fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(15.66416,0,0,15.66416,22604.166667,2243.580044)">
+                    <path d="M0,40.924L0,122.77L-266,122.77L-266,40.924L-133,-81.846L0,40.924Z" style="fill:rgb(0,173,181);fill-rule:nonzero;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

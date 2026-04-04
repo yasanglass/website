@@ -8,6 +8,8 @@ import org.jetbrains.compose.web.css.fontSize
 import org.jetbrains.compose.web.css.fontWeight
 import org.jetbrains.compose.web.css.margin
 import org.jetbrains.compose.web.css.maxWidth
+import org.jetbrains.compose.web.css.media
+import org.jetbrains.compose.web.css.mediaMaxWidth
 import org.jetbrains.compose.web.css.padding
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
@@ -101,6 +103,92 @@ object AppStyleSheet : StyleSheet() {
     val privacyLink by style {
         property("color", "var(--text)")
         property("text-decoration", "underline")
+    }
+
+    val fadeSlideUp by keyframes {
+        from {
+            property("opacity", "0")
+            property("transform", "translateY(20px)")
+        }
+        to {
+            property("opacity", "1")
+            property("transform", "translateY(0)")
+        }
+    }
+
+    val launcherPage by style {
+        display(DisplayStyle.Flex)
+        property("justify-content", "center")
+        property("align-items", "center")
+        property("min-height", "calc(100vh - 75px)")
+        property("padding", "24px 12px")
+        property("box-sizing", "border-box")
+    }
+
+    val launcherHero by style {
+        display(DisplayStyle.Flex)
+        property("flex-direction", "row")
+        property("justify-content", "center")
+        property("gap", "40px")
+        property("width", "fit-content")
+        property("max-width", "100%")
+        property("flex-wrap", "wrap")
+        property("align-items", "stretch")
+    }
+
+    val launcherLogo by style {
+        display(DisplayStyle.Flex)
+        property("align-self", "center")
+        property("flex", "0 0 auto")
+        property("margin", "0")
+        property("padding", "0")
+        property("line-height", "0")
+        property("animation", "${fadeSlideUp.name} 600ms ease-out both")
+    }
+
+    val launcherLogoImage by style {
+        property("height", "192px")
+        property("width", "auto")
+        property("margin", "0")
+        property("padding", "0")
+        property("display", "block")
+    }
+
+    val launcherContent by style {
+        display(DisplayStyle.Flex)
+        property("flex-direction", "column")
+        property("justify-content", "space-between")
+        property("gap", "10px")
+        property("flex", "0 1 auto")
+        property("min-width", "0")
+        property("animation", "${fadeSlideUp.name} 600ms ease-out 150ms both")
+
+        media(mediaMaxWidth(600.px)) {
+            self style {
+                property("align-items", "center")
+                property("text-align", "center")
+            }
+        }
+    }
+
+    val launcherTitle by style {
+        fontSize(2.75.cssRem)
+        fontWeight(700)
+        property("line-height", "1.05")
+    }
+
+    val launcherSubtitle by style {
+        property("margin", "0")
+        property("font-size", "1.25rem")
+    }
+
+    val launcherButton by style {
+        property("width", "fit-content")
+        property("gap", "6px")
+        property("justify-content", "center")
+        property("font-size", "1.05rem")
+        property("padding", "18px 24px")
+        margin(0.px)
     }
 
     val linkIcon by style {
