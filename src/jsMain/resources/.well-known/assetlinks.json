@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "yasan.space.mnml.ai.launcher",
+      "sha256_cert_fingerprints":
+      ["3B:06:DA:86:99:18:64:89:89:43:BF:BE:88:FE:5C:1A:91:FF:9F:73:E4:22:29:31:B1:A5:03:79:01:19:7F:DA"]
+    }
+  }
+]
