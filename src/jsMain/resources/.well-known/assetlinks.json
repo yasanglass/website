@@ -1,11 +1,38 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "yasan.space.mnml.ai.launcher",
-      "sha256_cert_fingerprints":
-      ["3B:06:DA:86:99:18:64:89:89:43:BF:BE:88:FE:5C:1A:91:FF:9F:73:E4:22:29:31:B1:A5:03:79:01:19:7F:DA"]
+      "sha256_cert_fingerprints": [
+        "3B:06:DA:86:99:18:64:89:89:43:BF:BE:88:FE:5C:1A:91:FF:9F:73:E4:22:29:31:B1:A5:03:79:01:19:7F:DA"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "yasan.space.mnml.ai.launcher.debug",
+      "sha256_cert_fingerprints": [
+        "81:F4:11:A4:B5:40:42:06:BB:65:D2:09:65:16:09:C8:C1:60:EB:88:67:84:62:68:53:38:D0:4E:A8:5E:B8:91"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "me.yasan.magic_8_ball",
+      "sha256_cert_fingerprints": [
+        "8E:79:DC:9A:B8:66:CC:14:74:7F:78:90:6D:97:CD:CA:B9:E9:50:FD:4F:9F:FC:CC:83:58:AF:05:02:ED:87:42"
+      ]
     }
   }
 ]
