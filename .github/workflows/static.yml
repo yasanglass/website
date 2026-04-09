@@ -80,10 +80,23 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v6
 
+      - name: Create pages artifact
+        run: |
+          tar \
+            --dereference --hard-dereference \
+            --directory build/dist/js/productionExecutable \
+            -cvf "$RUNNER_TEMP/artifact.tar" \
+            --exclude=.git \
+            --exclude=.github \
+            .
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
-          path: 'build/dist/js/productionExecutable'
+          name: github-pages
+          path: ${{ runner.temp }}/artifact.tar
+          retention-days: 1
+          if-no-files-found: error
 
       - name: Deploy to GitHub Pages
         id: deployment
