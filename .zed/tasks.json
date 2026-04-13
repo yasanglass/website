@@ -1,0 +1,37 @@
+[
+  {
+    "label": "hugo server",
+    "command": "hugo server",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  },
+  {
+    "label": "hugo server --buildDrafts",
+    "command": "hugo server --buildDrafts",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  },
+  {
+    "label": "hugo server --navigateToChanged",
+    "command": "hugo server --navigateToChanged",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  },
+  {
+    "label": "hugo --minify",
+    "command": "hugo --minify",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  },
+  {
+    "label": "hugo --minify --cleanDestinationDir",
+    "command": "hugo --minify --cleanDestinationDir",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  }
+]

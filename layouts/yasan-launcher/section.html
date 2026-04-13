@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="launcher-page">
+    <div class="launcher-hero">
+        {{ partial "logo.html" (dict "logo" .Params.logo "pictureClass" "launcher-logo" "class" "launcher-logo-image" "alt" .Title) }}
+        <div class="launcher-content">
+            <span class="launcher-title">{{ .Title }}</span>
+            <p class="launcher-subtitle">{{ .Params.hero.subtitle }}</p>
+            {{ partial "link-button.html" (dict
+                "url" .Params.cta.url
+                "label" .Params.cta.label
+                "icon" .Params.cta.icon
+                "rel" "noopener noreferrer"
+                "target" "_blank"
+                "class" "link launcher-button"
+            ) }}
+        </div>
+    </div>
+</div>
+{{ end }}

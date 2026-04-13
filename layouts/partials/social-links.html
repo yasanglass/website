@@ -1,0 +1,12 @@
+{{ range . }}
+<li>
+    {{ partial "link-button.html" (dict
+        "url" .url
+        "label" .name
+        "icon" .icon
+        "rel" .rel
+        "target" "_blank"
+        "class" "link"
+    ) }}
+</li>
+{{ end }}

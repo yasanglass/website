@@ -1,0 +1,40 @@
+[[home]]
+name = "Email"
+url = "mailto:yasanglass@gmail.com"
+icon = "ic_mail.svg"
+
+[[home]]
+name = "Discord Server"
+url = "https://discord.gg/8BQrfyA"
+icon = "ic_discord.svg"
+
+[[home]]
+name = "Telegram Channel"
+url = "https://t.me/YASANupdates"
+icon = "ic_telegram.svg"
+
+[[home]]
+name = "Play Store"
+url = "https://play.google.com/store/apps/dev?id=5035207490031558874"
+icon = "ic_play_store.svg"
+
+[[home]]
+name = "GitHub"
+url = "https://github.com/yasanglass"
+icon = "ic_github.svg"
+
+[[home]]
+name = "Mastodon"
+url = "https://mastodon.social/@yasanglass"
+icon = "ic_mastodon.svg"
+rel = "me"
+
+[[home]]
+name = "Bluesky"
+url = "https://bsky.app/profile/yasan.glass"
+icon = "ic_bluesky.svg"
+
+[[home]]
+name = "Crowdin"
+url = "https://crowdin.com/profile/yasanglass"
+icon = "ic_translate.svg"

@@ -1,8 +1,6 @@
-
 .idea/
-.gradle/
-build/
-.kotlin/
-node_modules/
-local.properties
 .DS_Store
+
+public/
+resources/_gen/
+.hugo_build.lock
