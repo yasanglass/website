@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="container">
+    <header>
+        {{ partial "logo.html" (dict "logo" .Params.logo "class" "logo-header" "alt" site.Title) }}
+        <p class="bio">{{ .Description }}</p>
+    </header>
+    <main>
+        <ul>
+            {{ partial "social-links.html" hugo.Data.links.home }}
+        </ul>
+    </main>
+</div>
+{{ end }}

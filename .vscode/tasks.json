@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "hugo server",
+      "type": "shell",
+      "command": "hugo server",
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "hugo server --buildDrafts",
+      "type": "shell",
+      "command": "hugo server --buildDrafts",
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "hugo server --navigateToChanged",
+      "type": "shell",
+      "command": "hugo server --navigateToChanged",
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "hugo --minify",
+      "type": "shell",
+      "command": "hugo --minify",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "hugo --minify --cleanDestinationDir",
+      "type": "shell",
+      "command": "hugo --minify --cleanDestinationDir",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    }
+  ]
+}

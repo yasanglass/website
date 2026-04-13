@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{ partial "head.html" . }}
+</head>
+<body class="{{ if .IsHome }}page-home{{ else if eq .Section "yasan-launcher" }}page-launcher{{ else }}page-default{{ end }}">
+{{ block "main" . }}{{ end }}
+</body>
+</html>
