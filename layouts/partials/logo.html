@@ -3,7 +3,7 @@
 {{ $alt := .alt }}
 {{ with $logo }}
 <picture{{ with $.pictureClass }} class="{{ . }}"{{ end }}>
-    {{ with .light }}<source srcset="{{ . | relURL }}" media="(prefers-color-scheme: dark)">{{ end }}
-    {{ with .dark }}<img src="{{ . | relURL }}"{{ with $alt }} alt="{{ . }}"{{ end }} class="{{ $class }}">{{ end }}
+    {{ with .dark }}<source srcset="{{ . | relURL }}" media="(prefers-color-scheme: dark)">{{ end }}
+    {{ with .light }}<img src="{{ . | relURL }}"{{ with $alt }} alt="{{ . }}"{{ end }} class="{{ $class }}">{{ end }}
 </picture>
 {{ end }}
