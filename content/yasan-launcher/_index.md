@@ -1,6 +1,6 @@
 +++
 title = "Yasan Launcher"
-description = "Yasan Launcher is an AI-powered, context-aware Android launcher that adapts to how you use your phone."
+description = "Context-aware Android launcher that adapts to how you use your phone."
 image = "/card.png"
 
 [logo]
@@ -13,5 +13,5 @@ url = "https://play.google.com/store/apps/details?id=yasan.space.mnml.ai.launche
 icon = "ic_play_store.svg"
 
 [hero]
-subtitle = "AI-Powered Android Launcher"
+subtitle = "Context-Aware Android Launcher"
 +++
