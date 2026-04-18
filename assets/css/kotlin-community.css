@@ -57,6 +57,13 @@
     text-align: center;
 }
 
+.community-secondary-link {
+    margin-top: 20px;
+    color: var(--text);
+    font-size: 0.95rem;
+    text-decoration: underline;
+}
+
 .community-button-icon {
     margin-left: 12px;
     font-size: 20px;
