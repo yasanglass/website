@@ -1,11 +1,15 @@
 {{ range . }}
 <li>
+    {{ $target := "" }}
+    {{ if not (hasPrefix .url "mailto:") }}
+        {{ $target = "_blank" }}
+    {{ end }}
     {{ partial "link-button.html" (dict
         "url" .url
         "label" .name
         "icon" .icon
         "rel" .rel
-        "target" "_blank"
+        "target" $target
         "class" "link"
     ) }}
 </li>
