@@ -2,7 +2,7 @@
 <div class="container">
     <header>
         {{ partial "logo.html" (dict "logo" .Params.logo "class" "logo-header" "alt" site.Title) }}
-        <p class="bio">{{ .Description }}</p>
+        <p class="bio">{{ .Params.bio }}</p>
     </header>
     <main>
         <ul>
