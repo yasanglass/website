@@ -6,7 +6,7 @@
 {{ $target := .target }}
 {{ $computedRel := $rel }}
 {{ if eq $target "_blank" }}
-    {{ $computedRel = cond $rel (printf "%s noopener noreferrer" $rel) "noopener noreferrer" }}
+    {{ $computedRel = cond $rel (printf "%s noopener" $rel) "noopener" }}
 {{ end }}
 <a href="{{ $href }}"{{ with $target }} target="{{ . }}"{{ end }}{{ with $computedRel }} rel="{{ . }}"{{ end }} class="{{ $class }}">
     <span>{{ $label }}</span>
