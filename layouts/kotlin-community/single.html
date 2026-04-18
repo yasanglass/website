@@ -1,0 +1,22 @@
+{{ define "main" }}
+<main class="community-page">
+    <div class="community-content">
+        <img class="community-hero" src="{{ "/kodee-pleased.png" | relURL }}" alt="" aria-hidden="true">
+        <h1 class="community-title">Community.kt</h1>
+        <p class="community-description">{{ .Params.heroDescription | default .Description }}</p>
+        {{ with .Params.eventsDescription }}
+        <p class="community-description community-events-description">{{ . }}</p>
+        {{ end }}
+        {{ with .Params.eventsCalendarURL }}
+        {{ partial "link-button.html" (dict
+            "url" .
+            "label" "Upcoming Events"
+            "class" "link community-button"
+            "icon_text" "open_in_new"
+            "icon_class" "community-button-icon material-symbols-rounded"
+            "target" "_blank"
+        ) }}
+        {{ end }}
+    </div>
+</main>
+{{ end }}

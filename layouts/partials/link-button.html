@@ -1,6 +1,8 @@
 {{ $href := .url }}
 {{ $label := .label }}
 {{ $icon := .icon }}
+{{ $iconText := .icon_text }}
+{{ $iconClass := .icon_class }}
 {{ $class := .class | default "link" }}
 {{ $rel := .rel }}
 {{ $target := .target }}
@@ -12,5 +14,8 @@
     <span>{{ $label }}</span>
     {{ with $icon }}
     <div class="link-icon" style="-webkit-mask-image: url('{{ (printf "/%s" .) | relURL }}'); mask-image: url('{{ (printf "/%s" .) | relURL }}');"></div>
+    {{ end }}
+    {{ with $iconText }}
+    <span class="{{ $iconClass }}">{{ . }}</span>
     {{ end }}
 </a>

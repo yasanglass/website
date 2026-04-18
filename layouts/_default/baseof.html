@@ -3,7 +3,17 @@
 <head>
 {{ partial "head.html" . }}
 </head>
-<body class="{{ if .IsHome }}page-home{{ else if eq .Section "yasan-launcher" }}page-launcher{{ else }}page-default{{ end }}">
+{{ $bodyClass := "page-default" }}
+{{ if .IsHome }}
+    {{ $bodyClass = "page-home" }}
+{{ else if .Params.bodyclass }}
+    {{ $bodyClass = .Params.bodyclass }}
+{{ else if eq .Section "yasan-launcher" }}
+    {{ $bodyClass = "page-launcher" }}
+{{ else if eq .Section "kotlin-community" }}
+    {{ $bodyClass = "page-community" }}
+{{ end }}
+<body class="{{ $bodyClass }}">
 {{ block "main" . }}{{ end }}
 </body>
 </html>
