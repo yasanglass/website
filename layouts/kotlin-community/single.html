@@ -1,0 +1,24 @@
+{{ define "main" }}
+<main class="community-page">
+    <div class="community-content community-detail-content">
+        <picture>
+            <source srcset="{{ "/cozy-kotlin-meetup-dark.gif" | relURL }}" media="(prefers-color-scheme: dark)">
+            <source srcset="{{ "/cozy-kotlin-meetup-light.gif" | relURL }}" media="(prefers-color-scheme: light)">
+            <img class="community-hero" src="{{ "/cozy-kotlin-meetup-light.gif" | relURL }}" alt="Cozy Kotlin MeetUp">
+        </picture>
+        <h1 class="community-sr-only">{{ .Title }}</h1>
+        <div class="community-detail-body prose">
+            {{ .Content }}
+        </div>
+        {{ partial "link-button.html" (dict
+            "url" "https://luma.com/communitykt?tag=meetup&utm_source=yasan.glass&utm_content=cozy-kotlin-meetup"
+            "label" "Upcoming Events"
+            "class" "link community-button"
+            "icon_text" "open_in_new"
+            "icon_class" "community-button-icon material-symbols-rounded"
+            "target" "_blank"
+        ) }}
+        <a class="community-secondary-link" href="{{ "/kotlin-community/code-of-conduct/" | relURL }}">Read our Code of Conduct</a>
+    </div>
+</main>
+{{ end }}

@@ -7,16 +7,25 @@
         {{ with .Params.eventsDescription }}
         <p class="community-description community-events-description">{{ . }}</p>
         {{ end }}
-        {{ with .Params.eventsCalendarURL }}
-        {{ partial "link-button.html" (dict
-            "url" .
-            "label" "Upcoming Events"
-            "class" "link community-button"
-            "icon_text" "open_in_new"
-            "icon_class" "community-button-icon material-symbols-rounded"
-            "target" "_blank"
-        ) }}
-        {{ end }}
+        <div class="community-button-row">
+            {{ with .Params.cozyMeetupURL }}
+            {{ partial "link-button.html" (dict
+                "url" .
+                "label" "Cozy Kotlin MeetUp"
+                "class" "link community-button"
+            ) }}
+            {{ end }}
+            {{ with .Params.eventsCalendarURL }}
+            {{ partial "link-button.html" (dict
+                "url" .
+                "label" "Upcoming Events"
+                "class" "link community-button"
+                "icon_text" "open_in_new"
+                "icon_class" "community-button-icon material-symbols-rounded"
+                "target" "_blank"
+            ) }}
+            {{ end }}
+        </div>
         <a class="community-secondary-link" href="{{ "/kotlin-community/code-of-conduct/" | relURL }}">Read our Code of Conduct</a>
     </div>
 </main>
