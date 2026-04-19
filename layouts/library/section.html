@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="library-page">
+    <section class="library-card">
+        <p class="library-eyebrow">Library</p>
+        <h1 class="library-title">{{ .Title }}</h1>
+        <p class="library-description">{{ .Params.hero.subtitle }}</p>
+        <div class="library-links" aria-label="{{ .Title }} links">
+            {{ range .Params.links }}
+            {{ partial "link-button.html" (dict
+                "url" .url
+                "label" .label
+                "target" "_blank"
+                "class" "link"
+            ) }}
+            {{ end }}
+        </div>
+    </section>
+</div>
+{{ end }}

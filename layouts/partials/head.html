@@ -1,4 +1,4 @@
-{{ $title := cond .IsHome site.Title .Title }}
+{{ $title := cond .IsHome site.Title (.Params.seotitle | default .Title) }}
 {{ $description := .Description | default site.Params.description }}
 {{ $image := .Params.image | default site.Params.defaultImage }}
 {{ $imageURL := "" }}
@@ -23,12 +23,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:FILL,GRAD,opsz,wght@1,0,24,400" rel="stylesheet">
 {{ $styles := slice
     (resources.Get "css/base.css")
     (resources.Get "css/home.css")
     (resources.Get "css/privacy.css")
+    (resources.Get "css/library.css")
     (resources.Get "css/launcher.css")
     (resources.Get "css/kotlin-community.css")
 }}

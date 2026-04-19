@@ -8,6 +8,8 @@
     {{ $bodyClass = "page-home" }}
 {{ else if .Params.bodyclass }}
     {{ $bodyClass = .Params.bodyclass }}
+{{ else if eq .Type "library" }}
+    {{ $bodyClass = "page-library" }}
 {{ else if eq .Section "yasan-launcher" }}
     {{ $bodyClass = "page-launcher" }}
 {{ else if eq .Section "kotlin-community" }}

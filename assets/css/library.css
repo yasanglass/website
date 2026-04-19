@@ -1,0 +1,64 @@
+.page-library .library-page {
+  min-height: calc(100vh - 75px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 12px;
+  box-sizing: border-box;
+}
+
+.page-library .library-card {
+  width: min(680px, 100%);
+  padding: 36px 32px;
+  border: 1px solid rgba(127, 127, 127, 0.2);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top left, rgba(61, 214, 208, 0.16), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(255, 185, 92, 0.14), transparent 32%),
+    var(--bg);
+}
+
+.page-library .library-eyebrow {
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-secondary);
+}
+
+.page-library .library-title {
+  margin: 0;
+  font-family: "Rubik Mono One", monospace;
+  font-size: clamp(2.8rem, 8vw, 4.8rem);
+  line-height: 0.95;
+}
+
+.page-library .library-description {
+  margin: 18px 0 0;
+  max-width: 34rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--fg-secondary);
+}
+
+.page-library .library-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.page-library .library-links .link {
+  display: inline-flex;
+  width: auto;
+  justify-content: center;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .page-library .library-card {
+    padding: 28px 22px;
+    border-radius: 22px;
+  }
+}
