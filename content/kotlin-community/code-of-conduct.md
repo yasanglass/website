@@ -4,7 +4,7 @@ description = "Code of conduct for Community.kt events and community spaces."
 layout = "code-of-conduct"
 +++
 
-Community.kt is committed to providing a friendly, safe, and welcoming environment for everyone. This code of conduct applies to official Community.kt events and official community spaces managed by Community.kt.
+[Community.kt](/kotlin-community/) is committed to providing a friendly, safe, and welcoming environment for everyone. This code of conduct applies to official Community.kt events and official community spaces managed by Community.kt.
 
 ## How to behave
 
