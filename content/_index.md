@@ -1,6 +1,6 @@
 +++
 title = "Yasan Glass"
-description = "Developer & Designer. Creator of Yasan Launcher, Artwalls, and AMOLED mnml."
+description = "Developer & Designer. Creator of Yasan Launcher, Artwalls, and AMOLED mnml, and core contributor to Lawnchair Launcher."
 bio = "Developer & Designer"
 image = "/card.png"
 
