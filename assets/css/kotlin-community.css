@@ -30,14 +30,18 @@
 
 .community-hero {
     display: block;
-    width: min(100%, 400px);
+    width: min(100%, 220px);
     height: auto;
     margin: 0 auto 20px;
     border-radius: 28px;
 }
 
-.community-detail-content .community-hero {
-    margin-bottom: 32px;
+.event-hero {
+    display: block;
+    width: min(100%, 400px);
+    height: auto;
+    margin: 0 auto 32px;
+    border-radius: 28px;
     border: 1px solid var(--layer-bg);
 }
 
