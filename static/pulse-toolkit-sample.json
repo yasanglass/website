@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "announcements": [
+    {
+      "title": "Title only (no id, no url)"
+    },
+    {
+      "id": "ann_title_id",
+      "title": "Title + id (no url)"
+    },
+    {
+      "id": "ann_id_title_only",
+      "title": "Missing url"
+    },
+    {
+      "title": "Title + url (no id)",
+      "url": "https://yasan.glass/"
+    },
+    {
+      "id": "ann_all_fields",
+      "title": "All fields present",
+      "url": "https://yasan.glass/"
+    },
+    {
+      "id": "ann_inactive",
+      "title": "Inactive announcement",
+      "url": "https://yasan.glass/",
+      "active": false
+    }
+  ]
+}
