@@ -1,13 +1,23 @@
 {{ define "main" }}
-<div class="container">
-    <header>
-        {{ partial "logo.html" (dict "logo" .Params.logo "class" "logo-header" "alt" site.Title) }}
-        <p class="bio">{{ .Params.bio }}</p>
+<main class="home-page">
+    <header class="home-header">
+        <h1 class="home-title">{{ .Title }}</h1>
+        {{ with .Params.bio }}
+        <p class="home-meta">{{ . }}</p>
+        {{ end }}
     </header>
-    <main>
-        <ul>
-            {{ partial "social-links.html" hugo.Data.links.home }}
-        </ul>
-    </main>
-</div>
+
+    <ul class="home-links" aria-label="Links">
+        {{ partial "social-links.html" hugo.Data.links.home }}
+    </ul>
+
+    <nav class="home-page-links" aria-label="Other pages">
+        <section class="home-page-link-group">
+            <h2 class="home-page-link-heading">Creations</h2>
+            <ul class="home-page-link-list">
+                <li><a href="{{ "/yasan-launcher/" | relURL }}">Yasan Launcher</a></li>
+            </ul>
+        </section>
+    </nav>
+</main>
 {{ end }}

@@ -1,16 +1,19 @@
 {{ range . }}
 <li>
     {{ $target := "" }}
-    {{ if not (hasPrefix .url "mailto:") }}
+    {{ if and (not (hasPrefix .url "mailto:")) (not (hasPrefix .url "/")) }}
         {{ $target = "_blank" }}
+    {{ end }}
+    {{ $class := "link home-link" }}
+    {{ if eq $target "_blank" }}
+        {{ $class = "link home-link home-link-external" }}
     {{ end }}
     {{ partial "link-button.html" (dict
         "url" .url
         "label" .name
-        "icon" .icon
         "rel" .rel
         "target" $target
-        "class" "link"
+        "class" $class
     ) }}
 </li>
 {{ end }}
