@@ -1,0 +1,10 @@
+version = 1
+name = "Website"
+
+[setup]
+script = ""
+
+[[actions]]
+name = "Run Hugo server"
+icon = "run"
+command = "hugo server"
