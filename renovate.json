@@ -1,0 +1,10 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended", "schedule:monthly"],
+  "timezone": "Europe/Prague",
+  "enabledManagers": ["github-actions"],
+  "labels": ["github actions", "dependencies"],
+  "assignees": ["yasanglass"],
+  "prConcurrentLimit": 5,
+  "rebaseWhen": "never"
+}
