@@ -1,4 +1,8 @@
 [[home]]
+name = "Blog"
+url = "/blog/"
+
+[[home]]
 name = "Discord Server"
 url = "https://discord.gg/8BQrfyA"
 

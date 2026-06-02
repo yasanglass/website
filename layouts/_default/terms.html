@@ -1,0 +1,22 @@
+{{ define "main" }}
+<main class="blog-page">
+    <section class="blog-header">
+        <a class="blog-home-link" href="{{ "/blog/" | relURL }}">Blog</a>
+        <h1 class="blog-title">Tags</h1>
+    </section>
+
+    <section class="blog-list-section" aria-label="Tags">
+        <h2 class="blog-list-heading">Tags</h2>
+        <div class="blog-list">
+        {{ range .Data.Terms.Alphabetical }}
+            <article class="blog-card">
+                <a class="blog-card-link" href="{{ .Page.RelPermalink }}">
+                    <h2 class="blog-card-title">#{{ .Page.Title }}</h2>
+                    <p class="blog-card-summary">{{ .Count }} {{ cond (eq .Count 1) "post" "posts" }}</p>
+                </a>
+            </article>
+        {{ end }}
+        </div>
+    </section>
+</main>
+{{ end }}

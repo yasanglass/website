@@ -7,15 +7,24 @@
         {{ end }}
     </header>
 
-    <ul class="home-links" aria-label="Links">
-        {{ partial "social-links.html" hugo.Data.links.home }}
-    </ul>
-
     <nav class="home-page-links" aria-label="Other pages">
+        <section class="home-page-link-group">
+            <ul class="home-page-link-list">
+                <li><a href="{{ "/blog/" | relURL }}"><span>Blog</span></a></li>
+            </ul>
+        </section>
+
         <section class="home-page-link-group">
             <h2 class="home-page-link-heading">Creations</h2>
             <ul class="home-page-link-list">
-                <li><a href="{{ "/yasan-launcher/" | relURL }}">Yasan Launcher</a></li>
+                <li><a href="{{ "/yasan-launcher/" | relURL }}"><span>Yasan Launcher</span></a></li>
+            </ul>
+        </section>
+
+        <section class="home-page-link-group">
+            <h2 class="home-page-link-heading">Socials</h2>
+            <ul class="home-links" aria-label="Social links">
+                {{ partial "social-links.html" (where hugo.Data.links.home "name" "ne" "Blog") }}
             </ul>
         </section>
     </nav>

@@ -1,0 +1,26 @@
+{{ define "main" }}
+<main class="blog-page blog-post">
+    <header class="blog-post-header">
+        <nav class="blog-header-links" aria-label="Post links">
+            <a class="blog-back-link" href="{{ "/blog/" | relURL }}">Blog</a>
+            {{ with .Date }}
+            <time class="blog-header-text" datetime="{{ .Format "2006-01-02" }}">{{ .Format "January 2, 2006" }}</time>
+            {{ end }}
+            {{ with .Params.tags }}
+            <span class="blog-header-separator" aria-hidden="true">/</span>
+            {{ range partial "ordered-tags.html" . }}
+            <a class="blog-post-tag" href="{{ printf "/tags/%s/" (.name | urlize) | relURL }}">{{ .name }}</a>
+            {{ end }}
+            {{ end }}
+        </nav>
+        <h1 class="blog-post-title">{{ .Title }}</h1>
+        {{ with .Description }}
+        <p class="blog-post-description">{{ . }}</p>
+        {{ end }}
+    </header>
+
+    <div class="blog-post-content prose">
+        {{ .Content }}
+    </div>
+</main>
+{{ end }}

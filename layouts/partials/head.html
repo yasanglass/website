@@ -6,13 +6,14 @@
 {{ $canonical := .Permalink }}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>{{ $title }}</title>
 {{ with $description }}<meta name="description" content="{{ . }}">{{ end }}
 <link rel="shortcut icon" type="image/png" href="{{ "/favicon.png" | relURL }}">
 <link rel="canonical" href="{{ $canonical }}">
 <meta property="og:title" content="{{ $title }}">
 {{ with $description }}<meta property="og:description" content="{{ . }}">{{ end }}
-<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:type" content="{{ .Params.ogtype | default (cond .IsHome "website" "article") }}">
 <meta property="og:url" content="{{ $canonical }}">
 {{ with $imageURL }}<meta property="og:image" content="{{ . }}">{{ end }}
 <meta name="twitter:card" content="summary_large_image">
@@ -30,6 +31,7 @@
     (resources.Get "css/base.css")
     (resources.Get "css/home.css")
     (resources.Get "css/privacy.css")
+    (resources.Get "css/blog.css")
     (resources.Get "css/library.css")
     (resources.Get "css/launcher.css")
     (resources.Get "css/kotlin-community.css")

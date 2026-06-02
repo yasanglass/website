@@ -1,0 +1,41 @@
+{{ define "main" }}
+<main class="blog-page">
+    <section class="blog-header">
+        <a class="blog-home-link" href="{{ "/blog/" | relURL }}">Blog</a>
+        <h1 class="blog-title">#{{ .Title }}</h1>
+    </section>
+
+    <section class="blog-list-section" aria-label="Tagged posts">
+        <h2 class="blog-list-heading">Posts</h2>
+        <div class="blog-list">
+        {{ $posts := .Pages.ByDate.Reverse }}
+        {{ if $posts }}
+            {{ range $posts }}
+            <article class="blog-card">
+                <a class="blog-card-link" href="{{ .RelPermalink }}">
+                    <h2 class="blog-card-title">{{ .Title }}</h2>
+                    {{ with .Description }}
+                    <p class="blog-card-summary">{{ . }}</p>
+                    {{ end }}
+                </a>
+                <span class="blog-card-meta">
+                    {{ with .Date }}
+                    <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "January 2, 2006" }}</time>
+                    {{ end }}
+                    {{ with .Params.tags }}
+                    <span class="blog-card-meta-tags">
+                        {{ range partial "ordered-tags.html" . }}
+                        <a class="blog-card-tag" href="{{ printf "/tags/%s/" (.name | urlize) | relURL }}">{{ .name }}</a>
+                        {{ end }}
+                    </span>
+                    {{ end }}
+                </span>
+            </article>
+            {{ end }}
+        {{ else }}
+            <p class="blog-empty">No posts yet.</p>
+        {{ end }}
+        </div>
+    </section>
+</main>
+{{ end }}

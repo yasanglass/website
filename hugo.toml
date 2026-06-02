@@ -2,7 +2,6 @@ baseURL = "https://yasan.glass/"
 languageCode = "en"
 title = "Yasan Glass"
 enableRobotsTXT = true
-disableKinds = ["taxonomy", "term", "RSS"]
 
 [params]
   twitterCreator = "@yasan"

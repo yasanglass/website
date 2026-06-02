@@ -1,0 +1,23 @@
+{{ $tags := . | default slice }}
+{{ $preferred := slice "creations" "personal" "yasan-launcher" }}
+{{ $ordered := slice }}
+{{ $seen := dict }}
+{{ range $preferred }}
+    {{ $preferredKey := . }}
+    {{ range $tags }}
+        {{ $tag := . }}
+        {{ $key := $tag | urlize }}
+        {{ if eq $key $preferredKey }}
+            {{ $ordered = $ordered | append (dict "name" $tag) }}
+            {{ $seen = merge $seen (dict $key true) }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+{{ range $tags }}
+    {{ $tag := . }}
+    {{ $key := $tag | urlize }}
+    {{ if not (index $seen $key) }}
+        {{ $ordered = $ordered | append (dict "name" $tag "sortKey" $key) }}
+    {{ end }}
+{{ end }}
+{{ return $ordered }}
