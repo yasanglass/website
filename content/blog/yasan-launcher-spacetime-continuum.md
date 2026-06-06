@@ -23,7 +23,7 @@ Yasan Launcher is a context-aware intelligent Android launcher that adapts to ho
 
 Instead of being a static home screen, it changes throughout the day based on what you are doing, where you are, or what you need at that moment.
 
-### Origins
+### Yasan Launcher Origins
 
 Yasan Launcher originally started as **mnml Launcher**, a weekend project I built to test a prediction algorithm I had in mind. Over time, that experiment became Yasan Launcher and grew into a more complete launcher, but I eventually stopped working on it.
 
