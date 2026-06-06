@@ -5,6 +5,11 @@ date = 2026-06-05T18:00:00+02:00
 draft = false
 tags = ["yasan-launcher", "creations"]
 image = "/blog/yasan-launcher-spacetime-continuum/spacetime-continuum-banner.png"
+
+[cta]
+label = "Get Yasan Launcher on Google Play"
+url = "https://play.google.com/store/apps/details?id=yasan.space.mnml.ai.launcher"
+icon = "ic_play_store.svg"
 +++
 
 The first major update to Yasan Launcher, **Spacetime Continuum**, is

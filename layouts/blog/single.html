@@ -25,5 +25,15 @@
     <div class="blog-post-content prose">
         {{ .Content }}
     </div>
+    {{ with .Params.cta }}
+    <footer class="blog-post-footer">
+        {{ partial "link-button.html" (dict
+            "url" .url
+            "label" .label
+            "target" "_blank"
+            "class" "blog-post-cta"
+        ) }}
+    </footer>
+    {{ end }}
 </main>
 {{ end }}
