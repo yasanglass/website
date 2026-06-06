@@ -17,6 +17,9 @@
         {{ with .Description }}
         <p class="blog-post-description">{{ . }}</p>
         {{ end }}
+        {{ with .Params.image }}
+        <img class="blog-post-banner" src="{{ . | relURL }}" alt="">
+        {{ end }}
     </header>
 
     <div class="blog-post-content prose">

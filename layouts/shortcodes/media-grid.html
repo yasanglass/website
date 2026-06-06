@@ -1,0 +1,28 @@
+{{ $class := .Get "class" }}
+{{ $items := .Get "items" }}
+{{ with .Inner }}
+  {{ $items = . }}
+{{ end }}
+{{ $separator := "," }}
+{{ if in $items "\n" }}
+  {{ $separator = "\n" }}
+{{ end }}
+<figure class="blog-media-grid{{ with $class }} blog-media-grid--{{ . }}{{ end }}">
+  {{ range split $items $separator }}
+    {{ $item := strings.TrimSpace . }}
+    {{ if $item }}
+    {{ $parts := split $item "|" }}
+    {{ if eq (index $parts 0) "video" }}
+      {{ $src := index $parts 1 }}
+      {{ $label := index $parts 2 }}
+      <video controls muted playsinline preload="metadata" aria-label="{{ $label }}">
+        <source src="{{ $src }}" type="video/mp4">
+      </video>
+    {{ else }}
+      {{ $src := index $parts 0 }}
+      {{ $alt := index $parts 1 }}
+      <img src="{{ $src }}" alt="{{ $alt }}">
+    {{ end }}
+    {{ end }}
+  {{ end }}
+</figure>
