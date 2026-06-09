@@ -6,3 +6,4 @@ enableRobotsTXT = true
 [params]
   twitterCreator = "@yasan"
   defaultImage = "/card.png"
+  cloudflareAnalyticsToken = "b1f4b0164a1a4c308e2d301a50db6ae5"
