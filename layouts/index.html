@@ -22,9 +22,16 @@
         </section>
 
         <section class="home-page-link-group">
+            <h2 class="home-page-link-heading">Community</h2>
+            <ul class="home-links" aria-label="Community links">
+                {{ partial "social-links.html" hugo.Data.links.community }}
+            </ul>
+        </section>
+
+        <section class="home-page-link-group">
             <h2 class="home-page-link-heading">Socials</h2>
             <ul class="home-links" aria-label="Social links">
-                {{ partial "social-links.html" (where hugo.Data.links.home "name" "ne" "Blog") }}
+                {{ partial "social-links.html" hugo.Data.links.socials }}
             </ul>
         </section>
     </nav>
