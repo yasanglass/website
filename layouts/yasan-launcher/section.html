@@ -1,18 +1,25 @@
 {{ define "main" }}
-<div class="launcher-page">
-    <div class="launcher-hero">
-        {{ partial "logo.html" (dict "logo" .Params.logo "pictureClass" "launcher-logo" "class" "launcher-logo-image" "alt" .Title) }}
-        <div class="launcher-content">
-            <span class="launcher-title">{{ .Title }}</span>
-            <p class="launcher-subtitle">{{ .Params.hero.subtitle }}</p>
-            {{ partial "link-button.html" (dict
-                "url" .Params.cta.url
-                "label" .Params.cta.label
-                "icon" .Params.cta.icon
-                "target" "_blank"
-                "class" "link launcher-button"
-            ) }}
+<main class="launcher-page">
+    <header class="launcher-header">
+        <nav class="launcher-header-links" aria-label="Launcher links">
+            <a class="launcher-home-link" href="{{ "/" | relURL }}">Yasan Glass</a>
+        </nav>
+        <div class="launcher-headline">
+            {{ partial "logo.html" (dict "logo" .Params.logo "pictureClass" "launcher-logo" "class" "launcher-logo-image" "alt" .Title) }}
+            <h1 class="launcher-title">{{ .Title }}</h1>
         </div>
-    </div>
-</div>
+        {{ with .Params.hero.subtitle }}
+        <p class="launcher-subtitle">{{ . }}</p>
+        {{ end }}
+    </header>
+
+    <section class="launcher-links" aria-label="Yasan Launcher links">
+        {{ partial "link-button.html" (dict
+            "url" .Params.cta.url
+            "label" .Params.cta.label
+            "target" "_blank"
+            "class" "launcher-cta launcher-cta-external"
+        ) }}
+    </section>
+</main>
 {{ end }}
