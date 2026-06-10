@@ -1,0 +1,43 @@
+{{ define "main" }}
+<main class="launcher-page launcher-releases-page">
+    <header class="launcher-header">
+        <nav class="launcher-header-links" aria-label="Launcher links">
+            <a class="launcher-home-link" href="{{ "/" | relURL }}">Yasan Glass</a>
+            <a class="launcher-home-link" href="{{ "/yasan-launcher/" | relURL }}">Yasan Launcher</a>
+        </nav>
+        <div class="launcher-headline">
+            <h1 class="launcher-title">{{ .Title }}</h1>
+        </div>
+        {{ with .Description }}
+        <p class="launcher-subtitle">{{ . }}</p>
+        {{ end }}
+    </header>
+
+    <section class="launcher-releases" aria-label="Yasan Launcher releases">
+        {{ range .Params.entries }}
+        {{ $entry := . }}
+        <article class="launcher-releases-entry{{ with $entry.type }} launcher-releases-entry-featured{{ end }}{{ with $entry.link }} launcher-releases-entry-has-link{{ end }}">
+            <div class="launcher-releases-entry-header">
+                <div class="launcher-releases-title-group">
+                    <h2 class="launcher-releases-version">{{ $entry.version_name }}-{{ $entry.version_code }}</h2>
+                    {{ with $entry.type }}
+                    <span class="launcher-releases-type">{{ . }}</span>
+                    {{ end }}
+                </div>
+            </div>
+            <ul class="launcher-releases-notes">
+                {{ range $entry.notes }}
+                <li>{{ . }}</li>
+                {{ end }}
+            </ul>
+            {{ with $entry.link }}
+            {{ $isExternal := and (hasPrefix . "http") (not (hasPrefix . site.BaseURL)) }}
+            <a class="launcher-releases-link{{ if $isExternal }} launcher-releases-link-external{{ end }}" href="{{ . }}"{{ if $isExternal }} target="_blank" rel="noopener noreferrer"{{ end }}>
+                <span>{{ $entry.link_label | default "Read more" }}</span>
+            </a>
+            {{ end }}
+        </article>
+        {{ end }}
+    </section>
+</main>
+{{ end }}

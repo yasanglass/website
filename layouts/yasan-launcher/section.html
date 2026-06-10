@@ -15,6 +15,11 @@
 
     <section class="launcher-links" aria-label="Yasan Launcher links">
         {{ partial "link-button.html" (dict
+            "url" "/yasan-launcher/releases/"
+            "label" "Releases"
+            "class" "launcher-cta"
+        ) }}
+        {{ partial "link-button.html" (dict
             "url" .Params.cta.url
             "label" .Params.cta.label
             "target" "_blank"

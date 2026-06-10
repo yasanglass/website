@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "entries": [
+{{- $entries := .Params.entries -}}
+{{- range $entryIndex, $entry := $entries }}
+    {
+      "version_name": {{ $entry.version_name | jsonify }},
+      "version_code": {{ $entry.version_code | jsonify }},
+{{- with $entry.type }}
+      "type": {{ . | jsonify }},
+{{- end }}
+{{- with $entry.link }}
+      "link": {{ . | jsonify }},
+{{- end }}
+{{- with $entry.link_label }}
+      "link_label": {{ . | jsonify }},
+{{- end }}
+      "notes": [
+{{- $notes := $entry.notes | default (slice) -}}
+{{- range $noteIndex, $note := $notes }}
+        {{ $note | jsonify }}{{ if lt (add $noteIndex 1) (len $notes) }},{{ end }}
+{{- end }}
+      ]
+    }{{ if lt (add $entryIndex 1) (len $entries) }},{{ end }}
+{{- end }}
+  ]
+}
