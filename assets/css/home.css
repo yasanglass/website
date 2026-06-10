@@ -30,6 +30,23 @@
   opacity: 0.55;
 }
 
+.page-home .home-footer {
+  margin-top: 48px;
+}
+
+.page-home .home-footer a {
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  opacity: 0.55;
+}
+
+.page-home .home-footer a:hover,
+.page-home .home-footer a:focus-visible {
+  opacity: 0.85;
+}
+
 .page-home .home-links {
   display: grid;
   gap: 0;
