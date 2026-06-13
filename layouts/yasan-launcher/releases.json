@@ -10,7 +10,7 @@
       "type": {{ . | jsonify }},
 {{- end }}
 {{- with $entry.link }}
-      "link": {{ . | jsonify }},
+      "link": {{ . | absURL | jsonify }},
 {{- end }}
 {{- with $entry.link_label }}
       "link_label": {{ . | jsonify }},
